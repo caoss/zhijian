@@ -7,6 +7,7 @@ Page(
             },
             // your other code below
             onLoad: function(){
+                this.props.homeStore.loadCategoryClauseResults()
             }
         }
     ),

@@ -29,6 +29,17 @@
         <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
     </view>
     <view>
-        <text> 总共: {{props.homeStore.todoText}} </text>
+        <text> 总共: {{props.homeStore.categoryData.total}} </text>
+    </view>
+
+
+    <view class="kind-list">
+            <block wx:for="{{props.homeStore.categoryData.data}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}">
+                        <view class="weui-flex__item">{{item.title}}</view>
+                    </view>
+                </view>
+            </block>
     </view>
 </view>
